@@ -2,6 +2,7 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
+    faultyItems.style.visibility = "hidden";
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
