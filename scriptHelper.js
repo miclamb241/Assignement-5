@@ -46,7 +46,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
         let form = document.querySelector("#launchForm");
         form.addEventListener("submit", function(event) {
-            list = "hidden";
             event.preventDefault();
             let pilotName = document.querySelector("input[name=pilotName]");
             let copilotName = document.querySelector("input[name=copilotName]");
@@ -71,16 +70,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
 
-    pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-    copilotStatus.innerHTML = `Copilot ${copilotName} is ready for launch`;
+    pilotStatus.innerHTML = `Pilot Chris is ready for launch`;
+    copilotStatus.innerHTML = `Copilot Bob is ready for launch`;
 
     if (parseInt(fuelLevelName) < 10000) {
-        fuelStatus.innerHTML = 'There is not enough fuel for the journey';
+        fuelStatus.innerHTML = 'Fuel level too low for launch';
         abort = true;
     }
 
     if (parseInt(cargoLevelName) > 10000) {
-        cargoStatus.innerHTML = 'Weight limit has been exceeded';
+        cargoStatus.innerHTML = 'Cargo mass too heavy for launch';
         abort = true;
     }
 
