@@ -44,6 +44,8 @@ function validateInput(testInput) {
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel, event) {
 
 
+        let form = document.querySelector("#launchForm");
+        form.addEventListener("submit", formSubmission)
             list = "hidden";
             event.preventDefault();
             let pilotName = document.querySelector("input[name=pilotName]");
@@ -94,7 +96,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel, e
     launchStatus.innerHTML = "Shuttle is ready for launch";
     fuelStatus.innerHTML = "Fuel level high enough for launch";
     cargoStatus.innerHTML = "Cargo mass low enough for launch";
-    
 }
 
 async function myFetch() {
