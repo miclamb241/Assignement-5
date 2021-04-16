@@ -55,7 +55,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                 window.alert("All fields are required!");
                 return;           
             }
-            else if(validateInput(pilotName.value) !== "Not a number" || validateInput(copilotName.value) !== "Not a number" || validateInput(fuelLevelName.value) !== "Is a number" || validateInput(cargoLevelName.value) !== "Is a number"){
+            else if(validateInput(pilotName.value) !== "Not a Number" || validateInput(copilotName.value) !== "Not a Number" || validateInput(fuelLevelName.value) !== "Is a Number" || validateInput(cargoLevelName.value) !== "Is a Number"){
                     window.alert("The information provided is invalid");
                     return;
                 }
