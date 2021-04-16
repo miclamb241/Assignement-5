@@ -1,5 +1,5 @@
 // Write your helper functions here!
-//require('isomorphic-fetch');
+require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
@@ -65,7 +65,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     
     if(parseInt(fuelLevel.value) >= 10000 && parseInt(cargoLevel.value) <= 10000)
         {
-            list.style.visibility = "hidden";
+            list.style.visibility = "visible";
 
             launchStatus.innerHTML = "Shuttle Is Ready for Launch";
             launchStatus.style.color = "rgb(65, 159, 106)";
@@ -96,7 +96,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                     fuelStatus.innerHTML = "Fuel level too low for launch";
                     cargoStatus.innerHTML = "Cargo Mass low enough for launch";
                 }
-                else
+                else if(parseInt(fuelLevel.value) < 10000 && parseInt(cargoLevel.value) > 10000)
                     {
                         list.style.visibility = "visible";
 
@@ -105,8 +105,17 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                         pilotStatus.innerHTML = `Pilot ${PilotName.value} is ready for launch`;
                         copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
                         fuelStatus.innerHTML = "Fuel level too low for launch";
-                        cargoStatus.innerHTML = "Cargo Mass too high for launch";
+                        cargoStatus.innerHTML = "Cargo Mass too heavy for launch";
                     }
+                    else
+                        {
+                            list.style.visibility = "hidden";
+
+                            pilotStatus.innerHTML = `Pilot Ready`;
+                            copilotStatus.innerHTML = `Co-pilot Ready`;
+                            fuelStatus.innerHTML = "Fuel level high enough for launch";
+                            cargoStatus.innerHTML = "Cargo Mass low enough for launch";
+                        }
 
                 });
 }
@@ -127,8 +136,8 @@ function pickPlanet(planets) {
     return planets[random];
 }
 
-//module.exports.addDestinationInfo = addDestinationInfo;
-//module.exports.validateInput = validateInput;
-//module.exports.formSubmission = formSubmission;
-//module.exports.pickPlanet = pickPlanet; 
-//module.exports.myFetch = myFetch;
+module.exports.addDestinationInfo = addDestinationInfo;
+module.exports.validateInput = validateInput;
+module.exports.formSubmission = formSubmission;
+module.exports.pickPlanet = pickPlanet; 
+module.exports.myFetch = myFetch;
