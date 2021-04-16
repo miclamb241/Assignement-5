@@ -43,8 +43,8 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-    let form = document.querySelector("#launchForm");
-    form.addEventListener("submit", function(event) {
+    let btn = document.querySelector("formSubmit");
+    btn.addEventListener("click", function(event) {
 
         event.preventDefault();
 
