@@ -63,62 +63,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                     window.alert("The information provided is invalid");
                     return;
                 }
-
-    let launchStatus = document.getElementById("launchStatus");
-    let faultyItems = document.getElementById("faultyItems");
-    let pilotStatus = document.getElementById("pilotStatus");
-    let copilotStatus = document.getElementById("copilotStatus");
-    let fuelStatus = document.getElementById("fuelStatus");
-    let cargoStatus = document.getElementById("cargoStatus");
-    
-    if(parseInt(fuelStatus.value) >= 10000 && parseInt(cargoStatus.value) <= 10000)
-        {
-            faultyItems.style.visibility = "visible";
-
-            launchStatus.innerHTML = "Shuttle Is Ready for Launch";
-            launchStatus.style.color = "rgb(65, 159, 106)";
-            pilotStatus.innerHTML = "Pilot Chris is ready for launch";
-            copilotStatus.innerHTML = "Co-pilot Bob is ready for launch";
-            fuelStatus.innerHTML = "Fuel level high enough for launch";
-            cargoStatus.innerHTML = "Cargo Mass low enough for launch";
-        }
-        else if(parseInt(fuelStatus.value) >= 10000 && parseInt(cargoStatus.value) > 10000)
-            {
-                faultyItems.style.visibility = "visible";
-
-                launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-                launchStatus.style.color = "rgb(199, 37, 78)";
-                pilotStatus.innerHTML = "Pilot Chris is ready for launch";
-                copilotStatus.innerHTML = "Co-pilot Bob is ready for launch";
-                fuelStatus.innerHTML = "Fuel level high enough for launch";
-                cargoStatus.innerHTML = "Cargo Mass too heavy for launch";
-            }
-            else if(parseInt(fuelStatus.value) < 10000 && parseInt(cargoStatus.value) <= 10000)
-                {
-                    faultyItems.style.visibility = "visible";
-
-                    launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-                    launchStatus.style.color = "rgb(199, 37, 78)";
-                    pilotStatus.innerHTML = "Pilot Chris is ready for launch";
-                    copilotStatus.innerHTML = "Co-pilot Bob is ready for launch";
-                    fuelStatus.innerHTML = "Fuel level too low for launch";
-                    cargoStatus.innerHTML = "Cargo Mass low enough for launch";
-                }
-                else
-                    {
-                        faultyItems.style.visibility = "visible";
-
-                        launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-                        launchStatus.style.color = "rgb(199, 37, 78)";
-                        pilotStatus.innerHTML = "Pilot Chris is ready for launch";
-                        copilotStatus.innerHTML = "Co-pilot Bob is ready for launch";
-                        fuelStatus.innerHTML = "Fuel level too low for launch";
-                        cargoStatus.innerHTML = "Cargo Mass too high for launch";
-                    }
-    
-
-});
-});
+            });
+        });
 }
 
 async function myFetch() {
