@@ -45,6 +45,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
         let form = document.getElementById("testForm");
         form.addEventListener("submit", function(event){
+            list = "hidden";
             event.preventDefault();
             let pilotName = document.querySelector("input[name=pilotName]");
             let copilotName = document.querySelector("input[name=copilotName]");
