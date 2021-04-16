@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
     let cargoMass = document.querySelector("input[name=cargoMass]");
 
     formSubmission(document, faultyItems, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value);
-});
+
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
@@ -32,5 +32,7 @@ window.addEventListener("load", function() {
 
        addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image);
    })
-   
+
+
+});
 });
