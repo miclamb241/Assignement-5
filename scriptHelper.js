@@ -43,6 +43,7 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
+    window.addEventListener("load", function() {
         let form = document.getElementById("testForm");
         form.addEventListener("submit", function(event){
             list = "hidden";
@@ -96,6 +97,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     fuelStatus.innerHTML = "Fuel level high enough for launch";
     cargoStatus.innerHTML = "Cargo mass low enough for launch";
 
+});
 });
 }
 
