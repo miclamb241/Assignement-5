@@ -63,7 +63,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
     
-    if(parseInt(fuelLevel.value) >= 10000 && parseInt(cargoLevel.value) <= 10000)
+    if(fuelLevel.value >= 10000 && cargoLevel.value <= 10000)
         {
             list.style.visibility = "visible";
 
