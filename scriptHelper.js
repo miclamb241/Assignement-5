@@ -32,11 +32,11 @@ function validateInput(testInput) {
 
         if(isNaN(testInput) === true)
             {
-                return "Not a number";
+                return "Not a Number";
             }
             else if(isNaN(testInput) === false)
                 {
-                    return "Is a number";
+                    return "Is a Number";
                 }
       }
 }
