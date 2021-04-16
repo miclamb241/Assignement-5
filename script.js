@@ -2,6 +2,7 @@
 
 window.addEventListener("load", function() {
 
+    list = "hidden";
     let document = window.document;
     let faultyItems = document.querySelector("#faultyItems");
     let pilotName = document.querySelector("input[name=pilotName]");
