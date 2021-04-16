@@ -41,9 +41,9 @@ function validateInput(testInput) {
       }
 }
 
-function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel, event) {
 
-    window.addEventListener("load", function(event) {
+
             list = "hidden";
             event.preventDefault();
             let pilotName = document.querySelector("input[name=pilotName]");
@@ -94,8 +94,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     launchStatus.innerHTML = "Shuttle is ready for launch";
     fuelStatus.innerHTML = "Fuel level high enough for launch";
     cargoStatus.innerHTML = "Cargo mass low enough for launch";
-
-});
+    
 }
 
 async function myFetch() {
