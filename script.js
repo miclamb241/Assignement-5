@@ -1,11 +1,11 @@
 
 // Write your JavaScript code here!
 
-const { formSubmission } = require("./scriptHelper");
+//const { formSubmission } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
     
-    faultyItems.style.visibility = "hidden";
+    faultyItems.style.visibility = "visible";
 
     formSubmission();
 
