@@ -5,7 +5,7 @@
 
 window.addEventListener("load", function() {
     
-    faultyItems.style.visibility = "visible";
+    faultyItems.style.visibility = "hidden";
 
     formSubmission();
 
