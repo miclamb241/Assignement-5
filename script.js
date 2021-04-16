@@ -1,12 +1,13 @@
 
 // Write your JavaScript code here!
 
-//const { formSubmission } = require("./scriptHelper");
+const { formSubmission } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
     
     let form = document.querySelector("#launchForm");
     form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
     let document = window.document;
     let faultyItems = document.querySelector("#faultyItems");
