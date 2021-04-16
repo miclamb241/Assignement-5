@@ -43,13 +43,9 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-
-        let form = document.querySelector("#launchForm");
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-
             let btn = document.querySelector("#formSubmit");
-            btn.addEventListener("submit", function() {
+            btn.addEventListener("submit", function(event) {
+            event.preventDefault();
             let pilotName = document.querySelector("input[name=pilotName]");
             let copilotName = document.querySelector("input[name=copilotName]");
             let fuelLevelName = document.querySelector("input[name=fuelLevel]");
@@ -64,7 +60,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                     return;
                 }
 
-                let launchStatus = document.getElementById("launchStatus");
+    let launchStatus = document.getElementById("launchStatus");
     let faultyItems = document.getElementById("faultyItems");
     let pilotStatus = document.getElementById("pilotStatus");
     let copilotStatus = document.getElementById("copilotStatus");
@@ -116,7 +112,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                         cargoStatus.innerHTML = "Cargo Mass too high for launch";
                     }
             });
-        });
 }
 
 async function myFetch() {

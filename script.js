@@ -5,9 +5,8 @@
 
 window.addEventListener("load", function() {
     
-    faultyItems.style.visibility = "hidden";
-
-    formSubmission();
+    let form = document.querySelector("#launchForm");
+    form.addEventListener("submit", formSubmission);
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
