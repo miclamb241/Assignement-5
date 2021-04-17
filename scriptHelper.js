@@ -43,7 +43,7 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-    list = "hidden";
+    list.style.visibility = "hidden";
 
     let button = document.querySelector("#formSubmit");
     button.addEventListener("submit", function(event) {
