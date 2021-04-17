@@ -2,7 +2,7 @@
 
 window.addEventListener("load", function() {
 
-    let form = document.querySelector("form");
+    let form = document.querySelector("#launchForm");
     form.addEventListener("submit", function() { 
 
         let document = window.document;

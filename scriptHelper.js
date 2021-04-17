@@ -61,8 +61,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let copilotStatus = document.getElementById("copilotStatus");
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
-
-    list.style.visibility = "hidden";
     
     if(fuelLevel < 10000 && cargoLevel <= 10000)
         {
