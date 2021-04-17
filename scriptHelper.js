@@ -43,10 +43,8 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-    let form = document.querySelector("form");
-    form.addEventListener("submit", function() {
-        let button = document.querySelector("#formSubmit");
-        button.addEventListener("submit", function(event) {
+    let button = document.querySelector("#formSubmit");
+    button.addEventListener("submit", function(event) {
 
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
             window.alert("All fields are required!");
@@ -57,7 +55,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             event.preventDefault();
         }
     });
-});
 
     let launchStatus = document.getElementById("launchStatus");
     let pilotStatus = document.getElementById("pilotStatus");
