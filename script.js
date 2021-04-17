@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
     form.addEventListener("submit", function() { 
 
         let document = window.document;
-        let faultyItems = document.getElementById("launchForm");
+        let faultyItems = document.getElementById("faultyItems");
         let pilotName = document.querySelector("input[name=pilotName]");
         let copilotName = document.querySelector("input[name=copilotName]");
         let fuelLevelName = document.querySelector("input[name=fuelLevel]");
