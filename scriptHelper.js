@@ -54,6 +54,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             window.alert("The information provided is invalid");
             event.preventDefault();
         }
+    });
 
     let launchStatus = document.getElementById("launchStatus");
     let pilotStatus = document.getElementById("pilotStatus");
@@ -96,7 +97,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                 }
                 else if(fuelLevel >= 10000 && cargoLevel <= 10000)
                     {
-                        list.style.visibility = "visible";
+                        list.style.visibility = "hidden";
                         
                         launchStatus.innerHTML = "Shuttle is Ready for Launch";
                         launchStatus.style.color = "rgb(65, 159, 106)";
@@ -115,7 +116,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                             cargoStatus.innerHTML = "Cargo mass low enough for launch";
                         }
 
-                    });
 }
 
 async function myFetch() {
