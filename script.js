@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
         let fuelLevelName = document.querySelector("input[name=fuelLevel]");
         let cargoMass = document.querySelector("input[name=cargoMass]");
     
-        formSubmission(document, faultyItems, pilotName.value, copilotName.value, fuelLevelName.value, cargoMass.value);
+        formSubmission(document, faultyItems.value, pilotName.value, copilotName.value, fuelLevelName.value, cargoMass.value);
     });
 
    let listedPlanets;
