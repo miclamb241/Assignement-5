@@ -54,7 +54,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             window.alert("The information provided is invalid");
             event.preventDefault();
         }
-    });
 
     let launchStatus = document.getElementById("launchStatus");
     let pilotStatus = document.getElementById("pilotStatus");
@@ -115,6 +114,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                             fuelStatus.innerHTML = "Fuel level high enough for launch";
                             cargoStatus.innerHTML = "Cargo mass low enough for launch";
                         }
+
+                    });
 }
 
 async function myFetch() {
