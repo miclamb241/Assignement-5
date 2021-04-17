@@ -43,10 +43,10 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-    list.style.visibility;
-
     let button = document.querySelector("#formSubmit");
     button.addEventListener("submit", function(event) {
+
+        list.style.visibility = "hidden";
 
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
             window.alert("All fields are required!");
