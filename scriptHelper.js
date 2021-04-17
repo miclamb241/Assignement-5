@@ -98,7 +98,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                     fuelStatus.innerHTML = "Fuel level too low for launch";
                     cargoStatus.innerHTML = "Cargo mass too heavy for launch";
                 }
-                else
+                else if(fuelLevel >= 10000 && cargoLevel <= 10000)
                     {
                         list.style.visibility = "visible";
                         
@@ -109,6 +109,15 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                         fuelStatus.innerHTML = "Fuel level high enough for launch";
                         cargoStatus.innerHTML = "Cargo mass low enough for launch";
                     } 
+                    else
+                        {
+                            list.style.visibility = "hidden";
+
+                            pilotStatus.innerHTML = `Pilot Ready`;
+                            copilotStatus.innerHTML = `Co-pilot Ready`;
+                            fuelStatus.innerHTML = "Fuel level high enough for launch";
+                            cargoStatus.innerHTML = "Cargo mass low enough for launch";
+                        }
 }
 
 async function myFetch() {
