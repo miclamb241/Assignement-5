@@ -43,6 +43,8 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
+    list.style.visibility;
+
     let button = document.querySelector("#formSubmit");
     button.addEventListener("submit", function(event) {
 
@@ -96,7 +98,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                     cargoStatus.innerHTML = "Cargo mass too heavy for launch";
                 }
                 else{
-                        list.style.visibility = "hidden";
+                        list.style.visibility = "visible";
                         
                         launchStatus.innerHTML = "Shuttle is Ready for Launch";
                         launchStatus.style.color = "rgb(65, 159, 106)";
