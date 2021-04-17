@@ -2,6 +2,8 @@
 
 window.addEventListener("load", function() {
 
+    faultyItems.style.visibility = "hidden";
+
     let form = document.querySelector("#launchForm");
     form.addEventListener("submit", function() { 
 
