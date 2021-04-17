@@ -43,8 +43,10 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
-    let button = document.querySelector("#formSubmit");
-    button.addEventListener("submit", function(event) {
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function() {
+        let button = document.querySelector("#formSubmit");
+        button.addEventListener("submit", function(event) {
 
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
             window.alert("All fields are required!");
@@ -95,7 +97,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                     fuelStatus.innerHTML = "Fuel level too low for launch";
                     cargoStatus.innerHTML = "Cargo mass too heavy for launch";
                 }
-                else if(fuelLevel >= 10000 && cargoLevel <= 10000)
+                else
                     {
                         list.style.visibility = "visible";
                         
@@ -106,10 +108,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                         fuelStatus.innerHTML = "Fuel level high enough for launch";
                         cargoStatus.innerHTML = "Cargo mass low enough for launch";
                     } 
-                    else 
-                        {
-                            list.style.visibility = "hidden";
-                        }  
+                });
 }
 
 async function myFetch() {
